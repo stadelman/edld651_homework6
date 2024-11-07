@@ -47,7 +47,9 @@ star <- import(here("data", "star.csv")) %>%
 ```
 
 ## Commit 2
-```{r}
 
-```
+Our team used the software R [@manual] to analyze the effect of cats on human emotion. @pongracz2018 discuss the important relationship between cats and humans, and some findings suggest that cats have a positive effect on human emotions [@bao2016; @galvan2016].
+
+\newpage
+# References 
 
