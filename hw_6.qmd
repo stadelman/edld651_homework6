@@ -10,6 +10,7 @@ execute:
   error: false
 fig-width: 6.5
 fig-height: 8
+bibliography: references.bib
 ---
 
 ## Commit 1
@@ -46,3 +47,7 @@ star <- import(here("data", "star.csv")) %>%
 ```
 
 ## Commit 2
+```{r}
+
+```
+
