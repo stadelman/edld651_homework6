@@ -1,0 +1,48 @@
+---
+title: "Homework 6"
+subtitle: "EDLD 651"
+author: "Haley Brown, Sabine Scott, Suzie Stadelman, & Emily Wilke"
+format: pdf
+execute: 
+  eval: true
+  echo: false
+  warning: false
+  error: false
+fig-width: 6.5
+fig-height: 8
+---
+
+## Commit 1
+
+#### Library Loading
+
+```{r}
+
+#new computer, who dis?
+
+#install.packages("here")
+#install.packages("rio")
+#install.packages("ggplot2")
+#install.packages("tidyverse")
+#install.packages("dplyr")
+
+library(here)
+library(rio)
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+
+#I loaded packages I thought we'd use, but I might have missed some. You may need to load others!
+
+```
+
+#### Load "star.csv" Data
+
+```{r}
+
+star <- import(here("data", "star.csv")) %>%
+  as_tibble()
+
+```
+
+## Commit 2
