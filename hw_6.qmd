@@ -32,6 +32,7 @@ library(rio)
 library(ggplot2)
 library(tidyverse)
 library(dplyr)
+library(knitr)
 
 #I loaded packages I thought we'd use, but I might have missed some. You may need to load others!
 
@@ -50,6 +51,29 @@ star <- import(here("data", "star.csv")) %>%
 
 Our team used the software R [@manual] to analyze the effect of cats on human emotion. @pongracz2018 discuss the important relationship between cats and humans, and some findings suggest that cats have a positive effect on human emotions [@bao2016; @galvan2016].
 
+## Commit 3
+
+```{r}
+star_new <-star %>% 
+ group_by(sex, frl) %>%
+ summarize(math_mean = mean(tmathss),
+            math_sd   = sd(tmathss),
+            rdg_mean = mean(treadss),
+            rdg_sd   = sd(treadss)) %>%
+  select(sex, frl, math_mean, math_sd, rdg_mean, rdg_sd)
+
+
+star_table <-kable(star_new)
+
+star_table
+```
+Overall, the average reading scores were lower, and had a lower standard deviation than student math scores. Girls also had a  higher average score than boys in both reading and math, and had a higher standard deviation in reading compared to boys, but a lower standard deviation in math. For both boys and girls, in reading and math, those who received free and reduced lunch had a lower average score
+
+
 \newpage
 # References 
+
+```{r}
+
+```
 
