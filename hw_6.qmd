@@ -2,7 +2,7 @@
 title: "Homework 6"
 subtitle: "EDLD 651"
 author: "Haley Brown, Sabine Scott, Suzie Stadelman, & Emily Wilke"
-format: pdf
+format: html 
 execute: 
   eval: true
   echo: false
@@ -71,7 +71,7 @@ Overall, the average reading scores were lower, and had a lower standard deviati
 
 ## Commit 4 
 
-# Create the following plot, using whatever theme you’d like, and briefly discuss it in text. (Note that might need to problem-solve how to put the legend at the bottom.)
+# Create the plot, using whatever theme you’d like, and briefly discuss it in text.
 
 ```{r}
 star <- star%>%
@@ -99,7 +99,7 @@ graph1 <- star%>%
 graph1 + scale_fill_discrete(name="Free\nLunch")
 
 ```
-
+There appears to be a positive, yet weak, association between a teacher's years of experience and their students' total math scale scores, even when adjusting for students who receive free/reduced lunch. 
 
 \newpage
 # References 
