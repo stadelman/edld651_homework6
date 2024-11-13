@@ -69,11 +69,43 @@ star_table
 ```
 Overall, the average reading scores were lower, and had a lower standard deviation than student math scores. Girls also had a  higher average score than boys in both reading and math, and had a higher standard deviation in reading compared to boys, but a lower standard deviation in math. For both boys and girls, in reading and math, those who received free and reduced lunch had a lower average score
 
+## Commit 4 
+
+# Create the following plot, using whatever theme you’d like, and briefly discuss it in text. (Note that might need to problem-solve how to put the legend at the bottom.)
+
+```{r}
+star <- star%>%
+characterize
+
+star <- star %>%
+  mutate(frl = recode(
+    frl,
+    "no" = "Free/Reduced Price Meals",
+    "yes" = "Paid Meals"
+  ))
+
+graph1 <- star%>%
+  ggplot(aes(totexp, tmathss)) + 
+  geom_point(color="gray", size = 0.5) +
+  geom_smooth(aes(color=frl),method= lm) +
+  theme_minimal() +
+  theme(legend.position ="bottom") +
+  labs(color = "Free lunch")+
+  labs(x = "Teacher Experience (Years)", 
+       y = "Total Math Scale Scores",
+       title = "Relation between teacher experience and math scores",
+       subtitle = "Separate regression lines displayed by free/reduced price lunch status")
+
+graph1 + scale_fill_discrete(name="Free\nLunch")
+
+```
+
 
 \newpage
 # References 
 
 ```{r}
 
+  
 ```
 
